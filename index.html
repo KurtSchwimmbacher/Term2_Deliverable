@@ -31,25 +31,23 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+                <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Home
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html #aboutHead">About Us</a>
+                    <a class="dropdown-item" href="index.html #subHead">Subs Of the Month</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index.html #footer">Socials</a>
+                  </div>
+              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" href="pages/sub.html">Build A Sub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/checkout.html">Checkout</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -74,7 +72,7 @@
 
       <!--About Us Section == col/row-->
       <div class="container-fluid"> <!--Bootstrap container-->
-        <h1>
+        <h1 id="aboutHead">
             About Us
         </h1>
         <div class="row">
@@ -90,7 +88,7 @@
       </div> <!--Bootstrap container-->
     
       <!--Subs of the month section == carousel-->
-      <h1 class="subHead">
+      <h1 class="subHead" id="subHead">
         Subs of the Month
       </h1>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -120,7 +118,7 @@
         </a>
       </div>
 
-      <footer>
+      <footer id="footer">
         <div class="footLogo"></div>
         <div class="footCC"></div>
         <div class="footSocials"></div>
