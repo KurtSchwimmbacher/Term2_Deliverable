@@ -3,13 +3,49 @@ body{
     background-color: #ABAEAF;
 }
 
+/*Header Styling*/
+.jumbotron{
+    height: 800px;
+    background-color: #99a692;
+}
+
+.heading{
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    color: white;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    font-family: 'Lobster', cursive;
+}
+
+.sandwich{
+    width: 500px;
+    height: 500px;
+    background-image: url(../assets/jumbo/sandwhich\ header.png);
+    background-position: center;
+    background-size: cover;
+ }
+ 
+ 
+ .splash{
+     width: 1000px;
+     height: 610px;
+     padding-top: 40px;
+     padding-left: 275px;
+     margin: 0 auto;
+     background-image: url(../assets/jumbo/Splash.png);
+     background-position: center;
+     background-size: cover;
+ }
+
+
 /*About us Section Styling*/
 .video-con{
     width: 100%;
     height: 300px;
     background-color: lightgray;
 }
-
 
 /*Subs of the month Styling*/
 .subHead{
