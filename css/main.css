@@ -85,3 +85,20 @@ footer{
     height: 130px;
     background-color: #2b2b2b;
 }
+
+footer{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+}
+
+.footLogo{
+    float: left;
+}
+
+.footCC{
+    margin-left: 50px;
+    padding-top: 32px;
+    color: white;
+    float: left;
+}
