@@ -1,6 +1,6 @@
 /*Global Styling*/
 body{
-    background-color: #ABAEAF;
+    background-color: #f4f4f4;
 }
 
 /*nav styling*/
@@ -27,14 +27,21 @@ body{
     margin-left: 10px;
 }
 
-
-/*Footer Styling*/
-footer{
-    width: 100%;
-    height: 130px;
-    background-color: #2b2b2b;
+/*body styling*/
+.container-fluid{
+background-color: #99a692;
 }
 
+.checkout-head{
+    margin-top: 20px;
+    color: #99a692;
+    font-family: 'Lobster', cursive;
+}
+
+.card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 /*Footer Styling*/
