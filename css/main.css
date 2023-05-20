@@ -72,6 +72,11 @@ body{
 }
 .carousel{
     margin-top: 20px;
+    background-color: #99a692;
+}
+
+.carousel-item{
+    margin-left: 400px;
 }
 
 /*Footer Styling*/
