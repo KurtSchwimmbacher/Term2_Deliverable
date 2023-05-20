@@ -102,3 +102,13 @@ footer{
     color: white;
     float: left;
 }
+
+.social-icon{
+    float: right;
+    padding-top: 16px;
+    margin-left: 100px;
+}
+
+.social-icon:hover{
+    cursor: pointer;
+}
