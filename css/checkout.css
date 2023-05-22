@@ -5,7 +5,16 @@ body{
 
 /*nav styling*/
 .navbar-brand{
-    margin-right: 475px;
+    margin-right: 360px;
+    float: left;
+}
+
+.navbar-brand p{
+    padding-top: 22px;
+    float: right;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    color: #99a692;
 }
 
 .active{
@@ -17,6 +26,8 @@ body{
 .nav-item{
     margin-left: 25px;
     margin-right: 25px;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
 }
 
 .nav-item:hover{
