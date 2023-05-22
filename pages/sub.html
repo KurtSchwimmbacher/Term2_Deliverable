@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--External Links-->
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -64,20 +69,50 @@
       <!--Form/Build A Sub Section-->
       <div class="container">
         <form>
+          <h1 class="buildHead">
+            Build Your Sandwich
+          </h1>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="text" class="form-control" id="inputSubName" aria-describedby="subName" placeholder="Name your Sandwich">
+            <small id="subName" class="form-text text-muted">Other people will be able to see your name.</small>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <h3>
+              Choose Your Bread
+            </h3>
+            <select class="form-control" id="size">
+              <option>Choose a Bread</option>
+              <option>White</option>
+              <option>Ciabatta</option>
+              <option>Rye</option>
+              <option>Sourdough</option>
+            </select>
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <div class="toppings">
+            <div aria-describedby="toppingReq" class="form-check top">
+              <h3>
+                Choose Your Toppings
+              </h3>
+              <small id="toppingReq" class="form-text text-muted">You will need a minimum of 5 toppings.</small>
+              
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Topping 1</label>
+
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Topping 2</label>
+            </div>
+
+            <div aria-describedby="sauceReq" class="base-check sauce">
+              <h3>
+                Choose Your Sauce
+              </h3>
+              <small id="sauceReq" class="form-text text-muted">You will need a minimum of 1 sauce.</small>
+
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-info">Add To Order</button>
         </form>
       </div>
 
