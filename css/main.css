@@ -38,6 +38,10 @@ body{
     margin-left: 10px;
 }
 
+.form-inline{
+    font-family: 'Pangolin', cursive !important;
+}
+
 
 
 /*Header Styling*/
@@ -81,6 +85,10 @@ body{
 .about-Head{
     color: #99a692;
     font-family: 'Lobster', cursive;
+}
+
+.about-txt{
+    font-family: 'Pangolin', cursive;
 }
 
 .video-con{
@@ -138,6 +146,7 @@ footer{
 .footCC{
     margin-left: 50px;
     padding-top: 32px;
+    font-family: 'Lobster', cursive;
     color: white;
     float: left;
 }

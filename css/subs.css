@@ -39,19 +39,24 @@ body{
 .nav-item img{
     margin-left: 10px;
 }
+.form-inline{
+    font-family: 'Pangolin', cursive !important;
+}
 
 
 /*Form Styling*/
 form{
     margin-top: 20px;
     margin-bottom: 50px;
+    font-family: 'Pangolin', cursive !important;
+    font-size: 18px;
 }
 
 .buildHead{
     margin-bottom: 20px;
 }
 
-form h1,h2,h3{
+h1,h2,h3{
     color: white;
     font-family: 'Lobster', cursive;
 }
@@ -101,12 +106,20 @@ form-text{
     width: 100%;
     margin-top: 400px;
 }
-.price{
-    margin-bottom: 20px;
+
+
+
+/*Order Styling*/
+.card-deck{
+    margin-top: 20px;
 }
-.calories{
-    margin-bottom: 20px;
+
+.order-info{
+    color: white;
+    font-family: 'Pangolin', cursive !important;
+    font-size: 18px;
 }
+
 
 /*Footer Styling*/
 footer{
@@ -127,6 +140,7 @@ footer{
 .footCC{
     margin-left: 50px;
     padding-top: 32px;
+    font-family: 'Lobster', cursive;
     color: white;
     float: left;
 }

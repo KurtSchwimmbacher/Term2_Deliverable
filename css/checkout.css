@@ -37,6 +37,9 @@ body{
 .nav-item img{
     margin-left: 10px;
 }
+.form-inline{
+    font-family: 'Pangolin', cursive !important;
+}
 
 /*body styling*/
 .container-fluid{
@@ -73,6 +76,7 @@ footer{
 .footCC{
     margin-left: 50px;
     padding-top: 32px;
+    font-family: 'Lobster', cursive;
     color: white;
     float: left;
 }
