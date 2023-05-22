@@ -100,12 +100,24 @@ body{
     font-family: 'Lobster', cursive;
 }
 .carousel{
-    margin-top: 20px;
     background-color: #99a692;
+    padding-bottom: 70px;
 }
 
-.carousel-item{
+
+.carousel-item img{
     margin-left: 400px;
+}
+
+.carousel-item p{
+    margin-bottom: -10px;
+    font-family: 'Pangolin', cursive;
+    font-weight: 400 !important;
+}
+
+.carousel-item h5{
+    font-family: 'Pangolin', cursive;
+    font-weight: 400 !important;
 }
 
 /*Footer Styling*/
