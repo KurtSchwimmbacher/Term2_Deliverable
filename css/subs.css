@@ -69,12 +69,25 @@ form h1,h2,h3{
 }
 
 .sauce{
+    width: 40%;
     float: left;
-    margin-left: 100px;
+    padding-right: 57px;
 }
 
 .btn-info{
     margin-top: 50px;
+}
+
+.total-details{
+    width: 100;
+    margin-top: 400px;
+}
+
+.price{
+    float: left;
+}
+.calories{
+    float: right;
 }
 
 /*Footer Styling*/
