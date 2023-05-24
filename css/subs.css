@@ -71,6 +71,11 @@ form-text{
     color: #f4f4f4;
 }
 
+.breadCal{
+    padding-left: 60px;
+    font-size: 11px;
+}
+
 .top{
     width: 60%;
     height: 400px;

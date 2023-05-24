@@ -118,10 +118,14 @@ body{
 
 /*Subs of the month Styling*/
 .sub-Head{
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-top: 40px;
     padding-left: 10px;
-    color: #99a692;
+    color: white;
+    text-align: center;
     font-family: 'Lobster', cursive;
+    font-size: 60px;
 }
 .carousel{
     background-color: #99a692;
@@ -130,6 +134,7 @@ body{
 
 
 .carousel-item img{
+    margin-top: -80px;
     margin-left: 400px;
 }
 
