@@ -74,7 +74,7 @@ form-text{
 .top{
     width: 60%;
     height: 400px;
-    padding-right: 65px;
+    padding-right: 210px;
     float: right;
 }
 
@@ -83,10 +83,10 @@ form-text{
     margin-top: 6px;
 }
 .form-check-label{
-    width: 150px;
+    width: 175px;
     margin-left: 40px;
     color: white;
-    font-size: ;
+    font-size: 15px;
 }
 
 .cal{
@@ -99,7 +99,7 @@ form-text{
 .sauce{
     width: 40%;
     float: left;
-    padding-right: 57px;
+    padding-right: 7px;
 }
 
 .btn-info{
@@ -108,7 +108,7 @@ form-text{
 
 .total-details{
     width: 100%;
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 /*Takeout styling*/
