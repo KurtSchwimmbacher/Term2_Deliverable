@@ -51,6 +51,8 @@ background-color: #99a692;
 .card{
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Pangolin', cursive !important;
+    color: #99a692;
 }
 
 .card-body img{
@@ -64,9 +66,28 @@ background-color: #99a692;
     float: right;
 }
 
+.card-details{
+    margin-right: 150px;
+    margin-top: -40px;
+    float: right;
+}
+
+.checkout-final{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    float: right;
+}
+
+.final-details{
+    font-family: 'Pangolin', cursive;
+    color: white;
+}
+
 .btn-group{
     margin-top: 20px;
     margin-bottom: 40px;
+    font-family: 'Pangolin', cursive;
 }
 
 /*Footer Styling*/

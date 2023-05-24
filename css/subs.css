@@ -83,6 +83,7 @@ form-text{
 .form-check-label{
     width: 150px;
     margin-left: 40px;
+    color: white;
 }
 
 .cal{
@@ -104,14 +105,14 @@ form-text{
 
 .total-details{
     width: 100%;
-    margin-top: 400px;
+    margin-top: 300px;
 }
-
-
 
 /*Order Styling*/
 .card-deck{
     margin-top: 20px;
+    font-family: 'Pangolin', cursive !important;
+    color: #99a692;
 }
 
 .order-info{
