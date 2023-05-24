@@ -100,8 +100,11 @@ body{
     font-family: 'Lobster', cursive;
 }
 
+
 .about-txt{
     font-family: 'Pangolin', cursive;
+    margin-top: 20px;
+    padding-right: 20px;
 }
 
 .video-con{
