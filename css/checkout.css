@@ -46,6 +46,8 @@ background-color: #99a692;
     padding-top: 20px;
     color: white;
     font-family: 'Lobster', cursive;
+    font-size: 100px;
+    text-align: center;
 }
 
 .card{
