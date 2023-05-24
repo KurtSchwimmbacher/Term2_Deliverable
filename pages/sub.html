@@ -75,7 +75,7 @@
           <h1 class="buildHead">
             Build Your Sandwich
           </h1>
-          <div class="form-group">
+          <div class="form-group" id="sandwichForm">
             <input type="text" class="form-control" id="inputSubName" aria-describedby="subName" placeholder="Name your Sandwich">
             <small id="subName" class="form-text text-muted">Other people will be able to see your name.</small>
           </div>
@@ -83,7 +83,7 @@
             <h3>
               Choose Your Bread
             </h3>
-            <select class="form-control" id="size">
+            <select class="form-control" id="breadSelect">
               <option>Choose a Bread</option>
               <option>White</option>
               <option>Ciabatta</option>
@@ -187,7 +187,40 @@
             <p class="calories" id="orderCal">Calories:</p>
           </div>
           
-          <button type="submit" class="btn btn-dark btn-block" disabled>Add To Order</button>
+          <button type="button" class="btn btn-dark btn-block" onclick="makeSandwich()">Add To Order</button>
+        </form>
+      </div>
+
+      <!--Take out or collection-->
+      <div class="container">
+        <form>
+          <div class="form-group">
+
+            <h3>How are you getting your order?</h3>
+
+            <div class="takeout-check">
+              <input class="form-check-input" type="radio" name="delRadio" id="collect" value="collect" data-cost="30" checked>
+              <label class="form-check-label" for="deep">
+                Collection
+              </label>
+            </div>
+
+          <div class="takeout-check">
+            <input class="form-check-input" type="radio" name="delRadio" id="deliver" value="deliver">
+            <label class="form-check-label" for="deliver">
+              Delivery
+            </label>
+          </div>
+
+            <label for="address">Email address</label>
+            <input type="text" class="form-control" id="address" aria-describedby="addressHelp" placeholder="Enter address">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your address with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNo" placeholder="Phone Number">
+          </div>
+          <button type="button" class="btn btn-dark">Submit Order</button>
         </form>
       </div>
 
@@ -200,8 +233,8 @@
           <p class="total-calories" id="orderCal">Total Calories:</p>
         </div>
         <div class="card-deck">
-          <div class="card border-info mb-3 text-center">
-            <img class="card-img-top" src="../assets/jumbo/sandwhich header.png" alt="Card image cap">
+          <div class="card border-info mb-3 text-center" id="orderCard">
+            <img id="orderCard" class="card-img-top" src="../assets/jumbo/sandwhich header.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Sandwich Name</h5>
               <p class="card-text">Ingredients</p>

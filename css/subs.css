@@ -110,6 +110,16 @@ form-text{
     margin-top: 300px;
 }
 
+/*Takeout styling*/
+.takeout-check{
+    margin-bottom: 20px;
+}
+
+.form-group{
+    color: white;
+}
+
+
 /*Order Styling*/
 .card-deck{
     margin-top: 20px;
