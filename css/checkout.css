@@ -92,6 +92,27 @@ background-color: #99a692;
     font-family: 'Pangolin', cursive;
 }
 
+.btn-danger{
+    background-color: #F6785D;
+    border: 2px solid #F6785D;
+}
+
+.btn-danger:hover{
+    background-color: #c4604a;
+    border: #c4604a;
+}
+
+
+.btn-success{
+    background-color: #00A36C;
+    border: 2px solid #00A36C;
+}
+
+.btn-success:hover{
+    background-color: #008256;
+    border: 2px solid #008256;
+}
+
 /*Footer Styling*/
 footer{
     width: 100%;
