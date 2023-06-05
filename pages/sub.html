@@ -70,12 +70,12 @@
       </nav>
 
       <!--Form/Build A Sub Section-->
-      <div class="container">
-        <form>
+      <div class="container" >
+        <form id="sandwichForm" onchange="sandwichCost()">
           <h1 class="buildHead">
             Build Your Sandwich
           </h1>
-          <div class="form-group" id="sandwichForm">
+          <div class="form-group">
             <input type="text" class="form-control" id="inputSubName" aria-describedby="subName" placeholder="Name your Sandwich">
             <small id="subName" class="form-text text-muted">Other people will be able to see your name.</small>
           </div>
@@ -98,66 +98,36 @@
                 Choose Your Toppings
               </h3>
               <small id="toppingReq" class="form-text text-muted">You will need a minimum of 5 toppings.</small>
-              
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Chicken <strong class="cost">R10</strong> <i class="cal">cal: 165</i></label>
-              
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Beef <strong class="cost">R10</strong> <i class="cal">cal: 250</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Pulled Pork <strong class="cost">R10</strong> <i class="cal">cal: 168</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Ham <strong class="cost">R10</strong> <i class="cal">cal: 145</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Bacon <strong class="cost">R10</strong> <i class="cal">cal: 270</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Tuna <strong class="cost">R10</strong> <i class="cal">cal: 132</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Tomato <strong class="cost">R10</strong> <i class="cal">cal: 33</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Pickles <strong class="cost">R10</strong> <i class="cal">cal: 11</i></label>
-              
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Onion <strong class="cost">R10</strong> <i class="cal">cal: 40</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Cucumber <strong class="cost">R10</strong> <i class="cal">cal: 30</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Avocado <strong class="cost">R10</strong> <i class="cal">cal: 120</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Lettuce <strong class="cost">R10</strong> <i class="cal">cal: 15</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Coleslaw <strong class="cost">R10</strong> <i class="cal">cal: 152</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Pineapple <strong class="cost">R10</strong> <i class="cal">cal: 50</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Brie <strong class="cost">R10</strong> <i class="cal">cal: 95</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Cheddar <strong class="cost">R10</strong> <i class="cal">cal: 113</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Feta <strong class="cost">R10</strong> <i class="cal">cal: 75</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Gouda <strong class="cost">R10</strong> <i class="cal">cal: 101</i></label>
-              
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Cream Cheese <strong class="cost">R10</strong> <i class="cal">cal: 97</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Goats Cheese <strong class="cost">R10</strong> <i class="cal">cal: 103</i></label>
+              <div class="input-group">
+                <select class="custom-select" id="toppingSelect">
+                  <option selected>Choose...</option>
+                  <option value="Chicken">Chicken <strong class="cost">R10</strong> <i class="cal">cal: 165</i></option>
+                  <option value="Beef">Beef <strong class="cost">R12</strong> <i class="cal">cal: 250</i></option>
+                  <option value="Pulled Pork">Pulled Pork <strong class="cost">R15</strong> <i class="cal">cal: 168</i></option>
+                  <option value="Ham">Ham <strong class="cost">R7</strong> <i class="cal">cal: 145</i></option>
+                  <option value="Bacon">Bacon <strong class="cost">R11</strong> <i class="cal">cal: 270</i></option>
+                  <option value="Tuna">Tuna <strong class="cost">R13</strong> <i class="cal">cal: 132</i></option>
+                  <option value="Tomato">Tomato <strong class="cost">R5</strong> <i class="cal">cal: 33</i></option>
+                  <option value="Pickles">Pickles <strong class="cost">R3</strong> <i class="cal">cal: 11</i></option>
+                  <option value="Onion">Onion <strong class="cost">R5</strong> <i class="cal">cal: 40</i></option>
+                  <option value="Cucumber">Cucumber <strong class="cost">R3</strong> <i class="cal">cal: 30</i></option>
+                  <option value="Avocado">Avocado <strong class="cost">R10</strong> <i class="cal">cal: 120</i></option>
+                  <option value="Lettuce">Lettuce <strong class="cost">R5</strong> <i class="cal">cal: 15</i></option>
+                  <option value="Coleslaw">Coleslaw <strong class="cost">R7</strong> <i class="cal">cal: 152</i></option>
+                  <option value="Pineapple">Pineapple <strong class="cost">R6</strong> <i class="cal">cal: 50</i></option>
+                  <option value="Brie">Brie <strong class="cost">R12</strong> <i class="cal">cal: 95</i></option>
+                  <option value="Cheddar">Cheddar <strong class="cost">R10</strong> <i class="cal">cal: 113</i></option>
+                  <option value="Feta">Feta <strong class="cost">R11</strong> <i class="cal">cal: 75</i></option>
+                  <option value="Gouda">Gouda <strong class="cost">R12</strong> <i class="cal">cal: 101</i></option>
+                  <option value="Cream Cheese">Cream Cheese <strong class="cost">R11</strong> <i class="cal">cal: 97</i></option>
+                  <option value="Goats Cheese">Goats Cheese <strong class="cost">R16</strong> <i class="cal">cal: 103</i></option>
+                </select>
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" onclick="addTopping()">Add Topping</button>
+                </div>
+              </div>
+             
+             
             </div>
 
             <div aria-describedby="sauceReq" class="base-check sauce">
@@ -166,20 +136,20 @@
               </h3>
               <small id="sauceReq" class="form-text text-muted">You will need a minimum of 1 sauce.</small>
 
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">BBQ <strong class="cost">R5</strong> <i class="cal">cal: 29</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">German Mustard <strong class="cost">R6</strong> <i class="cal">cal: 5</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Mayonnaise <strong class="cost">R7</strong> <i class="cal">cal: 94</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Tomato Sauce <strong class="cost">R2</strong> <i class="cal">cal: 4</i></label>
-
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Thousand Islands <strong class="cost">R3</strong> <i class="cal">cal: 59</i></label>
+              <div class="input-group">
+                <select class="custom-select" id="sauceSelect">
+                  <option selected>Choose...</option>
+                  <option value="BBQ">BBQ R5 cal:29</option>
+                  <option value="Mustard">German Mustard R6 cal:5</option>
+                  <option value="Mayo">Mayonnaise R6 cal:94</option>
+                  <option value="Tomato Sauce">Tomato Sauce R2 cal:4</option>
+                  <option value="3">Thousand Islands R3 cal:59</option>
+                </select>
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" onclick="addSauce()">Add Sauce</button>
+                </div>
+              </div>
+              
             </div>
           </div>
 

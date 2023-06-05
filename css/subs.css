@@ -77,9 +77,8 @@ form-text{
 }
 
 .top{
-    width: 60%;
+    width: 50%;
     height: 400px;
-    padding-right: 210px;
     float: right;
 }
 
@@ -94,15 +93,10 @@ form-text{
     font-size: 15px;
 }
 
-.cal{
-    font-size: 11px;
-}
-.cost{
-    font-size: 13px;
-}
+
 
 .sauce{
-    width: 40%;
+    width: 50%;
     float: left;
     padding-right: 7px;
 }
@@ -113,7 +107,7 @@ form-text{
 
 .total-details{
     width: 100%;
-    margin-top: 400px;
+    margin-top: 200px;
 }
 
 /*Takeout styling*/
