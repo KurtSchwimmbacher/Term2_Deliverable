@@ -140,10 +140,10 @@
                 <select class="custom-select" id="sauceSelect">
                   <option selected>Choose...</option>
                   <option value="BBQ">BBQ R5 cal:29</option>
-                  <option value="German Mustard">German Mustard R6 cal:5</option>
-                  <option value="Mayonnaise">Mayonnaise R6 cal:94</option>
+                  <option value="Mustard">German Mustard R6 cal:5</option>
+                  <option value="Mayo">Mayonnaise R6 cal:94</option>
                   <option value="Tomato Sauce">Tomato Sauce R2 cal:4</option>
-                  <option value="Thousand Islands">Thousand Islands R3 cal:59</option>
+                  <option value="3">Thousand Islands R3 cal:59</option>
                 </select>
                 <div class="input-group-append">
                   <button class="btn btn-secondary" type="button" onclick="addSauce()">Add Sauce</button>
@@ -158,10 +158,11 @@
             <p class="calories" id="orderCal">Calories:</p>
           </div>
           
-          <button type="button" class="btn btn-dark btn-block" onclick="makeSandwich();displayOrder()">Add To Order</button>
+          <button type="button" class="btn btn-dark btn-block" onclick="makeSandwich()">Add To Order</button>
         </form>
       </div>
 
+<<<<<<< HEAD
       <div class="container">
         <h1>
           Your Order
@@ -170,20 +171,12 @@
           <p class="total-price" id="orderPrice">Total Price:</p>
           <p class="total-calories" id="orderCal">Total Calories:</p>
         </div>
-        <div class="card-deck" id="orderContainer">
-          <div class="card border-info mb-3 text-center" id="orderCard">
-            <img id="orderCard" class="card-img-top" src="../assets/jumbo/sandwhich header.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">${name}</h5>
-              <p class="card-text">${bread} , ${sauces} ${toppings}</p>
-              <a class="btn btn-danger" onclick="removeSandwich()">Remove From Order</a>
-            </div>
-          </div>
-          
-         
+      
         </div>
       </div> 
 
+=======
+>>>>>>> parent of 3e7bacd (add dom manipulation to orders)
       <!--Take out or collection-->
       <div class="container">
         <form>
@@ -216,7 +209,41 @@
         </form>
       </div>
 
-       
+      <div class="container">
+        <h1>
+          Your Order
+        </h1>
+        <div class="order-info">
+          <p class="total-price" id="orderPrice">Total Price:</p>
+          <p class="total-calories" id="orderCal">Total Calories:</p>
+        </div>
+        <div class="card-deck">
+          <div class="card border-info mb-3 text-center" id="orderCard">
+            <img id="orderCard" class="card-img-top" src="../assets/jumbo/sandwhich header.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sandwich Name</h5>
+              <p class="card-text">Ingredients</p>
+              <a href="#" class="btn btn-danger">Remove From Order</a>
+            </div>
+          </div>
+          <div class="card border-info mb-3 text-center">
+            <img class="card-img-top" src="../assets/jumbo/sandwhich header.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sandwich Name</h5>
+              <p class="card-text">Ingredients</p>
+              <a href="#" class="btn btn-danger">Remove From Order</a>
+            </div>
+          </div>
+          <div class="card border-info mb-3 text-center">
+            <img class="card-img-top" src="../assets/jumbo/sandwhich header.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sandwich Name</h5>
+              <p class="card-text">Ingredients.</p>
+              <a href="#" class="btn btn-danger">Remove From Order</a>
+            </div>
+          </div>
+        </div>
+      </div>  
 
       
       <!--Footer-->
