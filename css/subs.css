@@ -167,3 +167,7 @@ footer{
 .social-icon:hover{
     cursor: pointer;
 }
+
+.btn-danger{
+    color: white !important;
+}

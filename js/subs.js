@@ -341,3 +341,9 @@ displayOrder = () =>{
         `
     }
 }
+
+
+removeSandwich = () =>{
+    orderArr.pop();
+    console.log(orderArr)
+}
