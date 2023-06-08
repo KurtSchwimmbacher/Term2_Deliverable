@@ -30,12 +30,19 @@ addSauce = () =>{
 makeSandwich = () =>{
     let name = document.getElementById("inputSubName").value;
     let bread = document.getElementById("breadSelect").value;
+    let calories = document.getElementById("orderCal").value;
+    let cost = document.getElementById("orderPrice").value;
+
+    console.log(calories);
+    console.log(cost);
  
     orderArr.push({
         sandwichName: name,
         sandwichBread: bread,
         sandwichToppings: toppingArr,
-        sandwichSauce: sauceArr
+        sandwichSauce: sauceArr,
+        sandwichCal: calories,
+        sandwichCost: cost
     });
     
     console.log(orderArr);
@@ -307,7 +314,7 @@ sandwichCost = () =>{
 
     document.getElementById("orderCal").innerHTML = "Calories: "+calories
     document.getElementById("orderPrice").innerHTML = "Price: R"+price+".00";
-
+    
 }
 
 displayOrder = () =>{
@@ -324,6 +331,8 @@ displayOrder = () =>{
         let bread = orderArr[i].sandwichBread;
         let sauces = orderArr[i].sandwichSauce;
         let toppings = orderArr[i].sandwichToppings;
+        let cost = orderArr[i].sandwichCost;
+        let calories = orderArr[i].sandwichCal;
 
         area.innerHTML+= `
         <div class="card border-info mb-3 text-center" id="orderCard">
@@ -331,7 +340,8 @@ displayOrder = () =>{
             <div class="card-body">
               <h5 class="card-title">${name}</h5>
               <p class="card-text">${bread}, ${sauces}, ${toppings}</p>
-              <a href="#" class="btn btn-danger">Remove From Order</a>
+              <p class="card-text">R${cost}.00</p>
+              <p class="card-text">Calories: ${calories}</p>
             </div>
           </div>
         `
