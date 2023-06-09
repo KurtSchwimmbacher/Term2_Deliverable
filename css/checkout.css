@@ -84,6 +84,7 @@ background-color: #99a692;
 .final-details{
     font-family: 'Pangolin', cursive;
     color: white;
+    margin-top: 50px;
 }
 
 .btn-group{
@@ -113,6 +114,31 @@ background-color: #99a692;
     border: 2px solid #008256;
 }
 
+
+/*Discount section*/
+.coupon{
+    width: 60%;
+    height: 120px;
+    padding-left: 40%;
+    margin-top: 100px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Pangolin', cursive;
+}
+
+.coupon-button{
+    margin-top: 20px;
+}
+
+
+.button-group{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
 /*Footer Styling*/
 footer{
     width: 100%;
@@ -122,6 +148,7 @@ footer{
     padding-right: 10%;
     padding-top: 20px;
 }
+
 
 
 .footLogo{

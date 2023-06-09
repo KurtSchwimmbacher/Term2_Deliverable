@@ -47,6 +47,41 @@ displayOrderCheckout = () =>{
 }
 
 
+updatePrice = () =>{ 
+  let orderData = JSON.parse(localStorage.getItem("sandwichOrder"));
+  let discount = 0;
+  let inputCode = document.getElementById("couponInput").value;
+
+console.log(inputCode)
+
+  if(inputCode == "Coupon Code"){
+    discount= 0.8;
+  }
+  else{
+    discount = 1;
+    console.log("not valid")
+  }
+ 
+  let dispPrice = document.getElementById("finalPrice");
+
+  let totalPrice = 0;
+
+  for(let i = 0; i < orderData.length; i++){
+    let cost = orderData[i].sandwichCost;
+    totalPrice += cost;
+  }
+
+  totalPrice = totalPrice*discount;
+
+  dispPrice.innerHTML = "R" + totalPrice +".00";
+
+}
+
+
+
+
+
+
 returnDefault = () =>{
     localStorage.removeItem("sandwichOrder");
     window.location.href = "../index.html";

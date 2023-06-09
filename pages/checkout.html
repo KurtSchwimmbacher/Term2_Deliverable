@@ -80,6 +80,7 @@
   
           
         </div>
+
         <div class="row">
           <div class="col-12">
             <div class="checkout-final">
@@ -91,9 +92,33 @@
                   Order Calories:
                 </p>
               </div>
-              <div class="btn-group" role="group" aria-label="Basic example">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-12">
+            <div class="coupon">
+              <p>
+                Apply a Coupon:
+              </p>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="couponInput" placeholder="Enter Coupon Code">
+                </div>
+                <button type="button" class="btn btn-dark coupon-button" onclick="updatePrice()">Submit Coupon Code</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-12">
+            <div class="button-group">
+              <div class="btn-group final-buttons" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-danger">Cancel Order</button>
-                <button type="button" class="btn btn-success" onclick="returnDefault">Submit Order</button>
+                <button type="button" class="btn btn-success" onclick="returnDefault()">Submit Order</button>
               </div>
             </div>
           </div>
@@ -104,7 +129,7 @@
 
       
       <!--Footer-->
-      <footer id="footer">
+      <footer class="footer" id="footer">
         <div class="footLogo">
           <img src="../assets/Logo.png" width="75" height="75">
         </div>

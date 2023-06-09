@@ -629,3 +629,26 @@ deliverySelected = () =>{
             <input type="text" class="form-control" id="phoneNo" placeholder="Phone Number">
           </div>`
 }
+
+
+addOrderTotals = () =>{
+    let dispPrice = 0;
+    let dispCal = 0;
+
+    for(let i = 0; i < orderArr.length; i++){
+        let cost = orderArr[i].sandwichCost;
+        let calories = orderArr[i].sandwichCal;
+
+        dispCal += calories;
+        dispPrice += cost;
+    }
+
+    let livePrice = document.getElementById("totalPrice");
+    let liveCalories = document.getElementById("totalCal");
+
+    console.log(dispCal);
+    console.log(dispPrice);
+
+    livePrice.innerHTML = "Total Price: R" + dispPrice +".00";
+    liveCalories.innerHTML = "Total Calories: "+dispCal;
+}
