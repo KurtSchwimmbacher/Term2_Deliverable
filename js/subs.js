@@ -608,3 +608,24 @@ storeOrderCheckout = () =>{
     localStorage.setItem("sandwichOrder",orderData);
     window.location.href = 'checkout.html';
 }
+
+collectionSelected = () =>{
+    let area = document.getElementById("enterAddress")
+    area.innerHTML = ``
+}
+
+
+deliverySelected = () =>{
+    let area = document.getElementById("enterAddress")
+
+    area.innerHTML = `
+    <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" aria-describedby="addressHelp" placeholder="Enter address">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your address with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNo" placeholder="Phone Number">
+          </div>`
+}
