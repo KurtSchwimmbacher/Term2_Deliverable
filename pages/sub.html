@@ -29,45 +29,45 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">
-          <img class="nav-logo" src="../assets/Logo.png" width="75" height="75">
-          <p>SuperSub</p>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <a class="navbar-brand" href="../index.html">
+        <img class="nav-logo" src="../assets/Logo.png" width="75" height="75">
+        <p>SuperSub</p>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Home
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../index.html">Home</a>
-                    <a class="dropdown-item" href="../index.html #aboutHead">About Us</a>
-                    <a class="dropdown-item" href="../index.html #subHead">Subs Of the Month</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.html #footer">Socials</a>
-                  </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Home
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../index.html">Home</a>
+              <a class="dropdown-item" href="../index.html #aboutHead">About Us</a>
+              <a class="dropdown-item" href="../index.html #subHead">Subs Of the Month</a>
+              <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.html #footer">Socials</a>
+            </div>
               <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="sub.html">Build A Sandwich</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="checkout.html">
-                Checkout
-                <img src="../assets/icons/shopping-cart-outline-svgrepo-com.svg">
-              </a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="sub.html">Build A Sandwich</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="checkout.html">
+              Checkout
+              <img src="../assets/icons/shopping-cart-outline-svgrepo-com.svg">
+            </a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
       <!--Form/Build A Sub Section-->
       <div class="container" >
@@ -92,12 +92,14 @@
               <option>French Loaf</option>
             </select>
           </div>
+
           <div class="toppings">
             <div aria-describedby="toppingReq" class="form-check top">
               <h3>
                 Choose Your Toppings
               </h3>
               <small id="toppingReq" class="form-text text-muted">You will need a minimum of 5 toppings.</small>
+              
               <div class="input-group">
                 <select class="custom-select" id="toppingSelect">
                   <option selected>Choose...</option>
@@ -122,16 +124,19 @@
                   <option value="Cream Cheese">Cream Cheese <strong class="cost">R11</strong> <i class="cal">cal: 97</i></option>
                   <option value="Goats Cheese">Goats Cheese <strong class="cost">R16</strong> <i class="cal">cal: 103</i></option>
                 </select>
+
                 <div class="input-group-append">
                   <button class="btn btn-secondary" type="button" onclick="addTopping()">Add Topping</button>
                 </div>
+
                 <div class="container" id="toppingList">
                   
                 </div>
-              </div>
+
+              </div> <!--Close Input Group-->
              
              
-            </div>
+            </div> <!--Close Form Check Group-->
 
             <div aria-describedby="sauceReq" class="base-check sauce">
               <h3>
@@ -154,10 +159,34 @@
                 <div class="container" id="sauceList">
                  
                 </div>
-              </div>
-              
             </div>
+
+            </div> <!--Close Form Check Group-->
+
           </div>
+
+
+        
+          <div class="drinks">
+            <h3>Drinks</h3>
+            <small id="drinkReq" class="form-text text-muted">Drinks are optional</small>
+            <div class="input-group">
+              <select class="custom-select" id="drinkSelect">
+                <option selected>Choose...</option>
+                  <option value="BBQ">BBQ R5 cal:29</option>
+                  <option value="German Mustard">German Mustard R6 cal:5</option>
+                  <option value="Mayonnaise">Mayonnaise R6 cal:94</option>
+                  <option value="Tomato Sauce">Tomato Sauce R2 cal:4</option>
+                  <option value="Thousand Islands">Thousand Islands R3 cal:59</option>
+              </select>
+              <div class="input-group-append">
+                <button class="btn btn-secondary " type="button" onclick="">Add Drink</button>
+              </div>
+              <div class="container" id="drinksList">
+               
+              </div>
+            </div>
+          </div>  
 
           <div class="total-details">
             <p class="price" id="orderPrice">Price:</p>
@@ -174,7 +203,7 @@
         </h1>
         <div class="order-info">
           <p class="total-price" id="totalPrice">Total Price:</p>
-          <p class="total-calories" id="total Cal">Total Calories:</p>
+          <p class="total-calories" id="totalCal">Total Calories:</p>
         </div>
         <div class="card-deck" id="orderContainer">
           
@@ -189,14 +218,14 @@
             <h3>How are you getting your order?</h3>
 
             <div class="takeout-check">
-              <input class="form-check-input" type="radio" name="delRadio" id="collect" value="collect" data-cost="30" checked onclick="collectionSelected()">
-              <label class="form-check-label" for="deep">
+              <input class="form-check-input" type="radio" name="delRadio" id="collect" value="collect" checked onclick="collectionSelected()">
+              <label class="form-check-label" for="collect">
                 Collection
               </label>
             </div>
 
             <div class="takeout-check">
-              <input class="form-check-input" type="radio" name="delRadio" id="deliver" value="deliver" onclick="deliverySelected()">
+              <input class="form-check-input" type="radio" name="delRadio" id="deliver" value="deliver" data-cost="30" onclick="deliverySelected()">
               <label class="form-check-label" for="deliver">
                Delivery
              </label>
