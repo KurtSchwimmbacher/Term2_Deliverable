@@ -44,8 +44,6 @@ addDrink = () =>{
     drinkArr[drinkCount] = drinkInp;
     drinkCount++; 
 
-    console.log("Drink Order: "+drinkArr);
-
     let area = document.getElementById("drinksList");
     area.innerHTML = `
         <p>
@@ -370,79 +368,84 @@ makeSandwich = () =>{
         });
 
  
-        document.getElementById("sandwichForm").reset();
+        
     }
 
-    
+    document.getElementById("sandwichForm").reset();
 }
 
 
 makeDrinkOrder = () =>{
-         //for drinks
-         let drinkPrice = 0;
-         let drinkCal = 0;
-         let drinkInp = document.getElementById("drinkSelect").value;
-         switch(drinkInp){
-             case "Coke":
-                 drinkPrice+= 14;
-                 drinkCal+=139;
-                 break;
-             case "Pepsi":
-                 drinkPrice += 14;
-                 drinkCal += 150;
-                 break;
-             case "Sprite":
+    //for drinks
+    let drinkPrice = 0;
+    let drinkCal = 0;
+
+    if(drinkCount>0){
+        let drinkInp = document.getElementById("drinkSelect").value;
+        switch(drinkInp){
+            case "Coke":
+                drinkPrice+= 14;
+                drinkCal+=139;
+                break;
+            case "Pepsi":
+                drinkPrice += 14;
+                drinkCal += 150;
+                    break;
+            case "Sprite":
                 drinkPrice += 14;
                 drinkCal += 49;
-                 break;
-             case "Fanta Orange":
-                 drinkPrice += 14;
-                 drinkCal +=63;
-                 break;
-             case "2l Coke":
-                 drinkPrice += 30;
-                 drinkCal += 417;
-                 break;
-             default:
-                 drinkPrice +=0;
-                 drinkCal +=0;
-         }
-
-         for(i = 0; i<drinkCount;i++){
-            switch(drinkArr[i]){
-                case "Coke":
-                    drinkPrice+= 14;
-                    drinkCal+=139;
-                    break;
-                case "Pepsi":
-                    drinkPrice += 14;
-                    drinkCal += 150;
-                    break;
-                case "Sprite":
-                   drinkPrice += 14;
-                   drinkCal += 49;
-                    break;
-                case "Fanta Orange":
-                    drinkPrice += 14;
-                    drinkCal +=63;
-                    break;
-                case "2l Coke":
-                    drinkPrice += 30;
-                    drinkCal += 417;
+                break;
+            case "Fanta Orange":
+                drinkPrice += 14;
+                drinkCal +=63;
+                break;
+            case "2l Coke":
+                drinkPrice += 30;
+                drinkCal += 417;
                     break;
                 default:
                     drinkPrice +=0;
                     drinkCal +=0;
-            }
-         }
+             }
+    
+             for(i = 0; i<drinkCount;i++){
+                switch(drinkArr[i]){
+                    case "Coke":
+                        drinkPrice+= 14;
+                        drinkCal+=139;
+                        break;
+                    case "Pepsi":
+                        drinkPrice += 14;
+                        drinkCal += 150;
+                        break;
+                    case "Sprite":
+                       drinkPrice += 14;
+                       drinkCal += 49;
+                        break;
+                    case "Fanta Orange":
+                        drinkPrice += 14;
+                        drinkCal +=63;
+                        break;
+                    case "2l Coke":
+                        drinkPrice += 30;
+                        drinkCal += 417;
+                        break;
+                    default:
+                        drinkPrice +=0;
+                        drinkCal +=0;
+                }
+             }
+    
+             drinkOrderArr.push({
+                drink:drinkInp,
+                drinkCost: drinkPrice,
+                drinkCalories: drinkCal
+             })
+    
+             document.getElementById("sandwichForm").reset();
+    }
 
-         drinkOrderArr.push({
-            drink:drinkInp,
-            drinkCost: drinkPrice,
-            drinkCalories: drinkCal
-         })
-
-         document.getElementById("sandwichForm").reset();
+   
 }
 
 sandwichCost = () =>{
@@ -797,7 +800,7 @@ displayOrder = () =>{
         `
     }
 
-    console.log("drink order length: "+drinkOrderArr.length)
+  
     for(let i = 0; i <drinkOrderArr.length;i++){
         let drink = drinkOrderArr[i].drink;
         let drinkCals = drinkOrderArr[i].drinkCalories;
@@ -863,7 +866,6 @@ addOrderTotals = () =>{
 
     for(let i = 0; i<drinkOrderArr.length;i++){
         let dCost = drinkOrderArr[i].drinkCost;
-        console.log("live cost for drink: "+dCost);
         let dCalories = drinkOrderArr[i].drinkCalories;
 
         dispCal += dCalories;
@@ -872,9 +874,6 @@ addOrderTotals = () =>{
 
     let livePrice = document.getElementById("totalPrice");
     let liveCalories = document.getElementById("totalCal");
-
-    console.log("total order cost: "+dispCal);
-    console.log("total order cals: "+dispPrice);
 
     livePrice.innerHTML = "Total Price: R" + dispPrice +".00";
     liveCalories.innerHTML = "Total Calories: "+dispCal;
