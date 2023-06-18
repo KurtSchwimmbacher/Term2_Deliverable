@@ -14,6 +14,13 @@ addTopping = () =>{
     toppingCount++;
 
     console.log(toppingArr)
+
+    let area = document.getElementById("toppingList");
+    area.innerHTML = `
+        <p>
+            Your Toppings: ${toppingArr.join(", ")}
+        </p>
+    `
 }
 
 addSauce = () =>{
@@ -22,6 +29,13 @@ addSauce = () =>{
     sauceCount++; 
 
     console.log(sauceArr);
+
+    let area = document.getElementById("sauceList");
+    area.innerHTML = `
+        <p>
+            Your Sauces: ${sauceArr.join(", ")}
+        </p>
+    `
 
 }
 
