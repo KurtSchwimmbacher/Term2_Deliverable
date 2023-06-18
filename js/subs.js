@@ -20,7 +20,7 @@ addTopping = () =>{
     let area = document.getElementById("toppingList");
     area.innerHTML = `
         <p>
-            Your Toppings: ${toppingArr.join(", ")}
+            Your Toppings: ${toppingArr}
         </p>
     `
 }
@@ -29,6 +29,7 @@ addSauce = () =>{
     let sauceInp = document.getElementById("sauceSelect").value
     sauceArr[sauceCount] = sauceInp;
     sauceCount++; 
+    console.log[sauceArr]
 
     let area = document.getElementById("sauceList");
     area.innerHTML = `
@@ -101,6 +102,10 @@ makeSandwich = () =>{
     }
 
     if(validateSauceTopping() === 0){
+        let area = document.getElementById("sauceList");
+        let areaTwo = document.getElementById("toppingList");
+        area.innerHTML = ``
+        areaTwo.innerHTML = ``
         switch(bread) {
             case "White":
                 price+= 15;
@@ -368,10 +373,14 @@ makeSandwich = () =>{
         });
 
  
-        
+        document.getElementById("sandwichForm").reset();
+        toppingArr = [];
+        sauceArr = [];
+        sauceCount = 0;
+        toppingCount = 0;
     }
 
-    document.getElementById("sandwichForm").reset();
+    
 }
 
 
@@ -379,8 +388,11 @@ makeDrinkOrder = () =>{
     //for drinks
     let drinkPrice = 0;
     let drinkCal = 0;
+    let area = document.getElementById("drinksList");
+    area.innerHTML = ``
 
     if(drinkCount>0){
+
         let drinkInp = document.getElementById("drinkSelect").value;
         switch(drinkInp){
             case "Coke":
@@ -443,6 +455,8 @@ makeDrinkOrder = () =>{
              })
     
              document.getElementById("sandwichForm").reset();
+             drinkArr = [];
+             drinkCount = 0;
     }
 
    
