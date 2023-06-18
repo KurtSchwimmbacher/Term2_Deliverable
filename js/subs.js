@@ -377,7 +377,7 @@ makeSandwich = () =>{
 }
 
 
-drinkOrderArr = () =>{
+makeDrinkOrder = () =>{
          //for drinks
          let drinkPrice = 0;
          let drinkCal = 0;
@@ -436,11 +436,13 @@ drinkOrderArr = () =>{
             }
          }
 
-         drinkArr.push({
+         drinkOrderArr.push({
             drink:drinkInp,
             drinkCost: drinkPrice,
             drinkCalories: drinkCal
          })
+
+         document.getElementById("sandwichForm").reset();
 }
 
 sandwichCost = () =>{
@@ -794,11 +796,32 @@ displayOrder = () =>{
           </div>
         `
     }
+
+    console.log("drink order length: "+drinkOrderArr.length)
+    for(let i = 0; i <drinkOrderArr.length;i++){
+        let drink = drinkOrderArr[i].drink;
+        let drinkCals = drinkOrderArr[i].drinkCalories;
+        let drinkPrice = drinkOrderArr[i].drinkCost;
+
+
+        area.innerHTML += `
+        <div class="card border-info mb-3 text-center" id="orderCard">
+            <img id="orderCard" class="card-img-top" src="../assets/jumbo/drink png.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">${drink}</h5>
+              <p class="card-text">R${drinkPrice}.00</p>
+              <p class="card-text">Calories: ${drinkCals}</p>
+            </div>
+          </div>
+        `
+    }
 }
 
 storeOrderCheckout = () =>{
     let orderData = JSON.stringify(orderArr);
+    let drinkData = JSON.stringify(drinkOrderArr);
     localStorage.setItem("sandwichOrder",orderData);
+    localStorage.setItem("drinkOrder",drinkData);
     window.location.href = 'checkout.html';
 }
 
@@ -838,11 +861,20 @@ addOrderTotals = () =>{
         dispPrice += cost;
     }
 
+    for(let i = 0; i<drinkOrderArr.length;i++){
+        let dCost = drinkOrderArr[i].drinkCost;
+        console.log("live cost for drink: "+dCost);
+        let dCalories = drinkOrderArr[i].drinkCalories;
+
+        dispCal += dCalories;
+        dispPrice += dCost;
+    }
+
     let livePrice = document.getElementById("totalPrice");
     let liveCalories = document.getElementById("totalCal");
 
-    console.log(dispCal);
-    console.log(dispPrice);
+    console.log("total order cost: "+dispCal);
+    console.log("total order cals: "+dispPrice);
 
     livePrice.innerHTML = "Total Price: R" + dispPrice +".00";
     liveCalories.innerHTML = "Total Calories: "+dispCal;
